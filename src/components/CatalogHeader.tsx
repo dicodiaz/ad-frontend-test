@@ -1,15 +1,24 @@
 'use client';
 
-import { allGames } from '@/utils/endpoint';
+import { Data } from '@/services';
 import { useRouter, useSearchParams } from 'next/navigation';
 
-export const CatalogHeader: React.FC = () => {
+export type CatalogHeaderProps = {
+  availableFilters: Data['availableFilters'];
+};
+
+export const CatalogHeader: React.FC<CatalogHeaderProps> = ({ availableFilters }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
   const handleGenreChange: React.ChangeEventHandler<HTMLSelectElement> = (e) => {
+    const genre = e.target.value;
     const params = new URLSearchParams(searchParams);
-    params.set('genre', e.target.value);
+    if (genre === 'all') {
+      params.delete('genre');
+    } else {
+      params.set('genre', genre);
+    }
     router.push(`?${params.toString()}`);
   };
 
@@ -21,7 +30,7 @@ export const CatalogHeader: React.FC = () => {
         <div className="my-[1px] w-px bg-[#3B3B3B]" />
         <select className="flex-1" onChange={handleGenreChange}>
           <option value="all">All</option>
-          {Array.from(new Set(allGames.map(({ genre }) => genre)))
+          {availableFilters
             .sort((a, b) => a.localeCompare(b))
             .map((genre, index) => (
               <option key={index} value={genre}>
