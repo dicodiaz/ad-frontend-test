@@ -15,7 +15,6 @@ For example: `http://localhost:3000/api/games?genre=Battle%20Royale&page=1`
 
 The "See more" functionality should be implemented using the “page” URL parameter from this API. The attributes to use for the games are `id`, `genre`, `image`, `name`, `description`, `price`, `isNew`.
 
-
 ## REQUIREMENTS
 
 ### General
