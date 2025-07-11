@@ -1,3 +1,4 @@
+import { Footer, Navbar } from '@/components';
 import type { Metadata } from 'next';
 import './globals.css';
 
@@ -13,7 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-area">{children}</body>
+      <body className="font-area">
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
