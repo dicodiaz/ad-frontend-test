@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-area">
+      <body className="font-area flex min-h-dvh flex-col">
         <Navbar />
         {children}
         <Footer />

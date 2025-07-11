@@ -1,5 +1,6 @@
 export * from './Catalog';
-export * from './CatalogHeader';
+export * from './CatalogFallback';
 export * from './Footer';
 export * from './GameCard';
+export * from './GenreSelect';
 export * from './Navbar';
