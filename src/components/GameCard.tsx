@@ -1,3 +1,6 @@
+'use client';
+
+import { useCartContext } from '@/context';
 import { Game } from '@/utils/endpoint';
 
 export type GameCardProps = {
@@ -5,7 +8,17 @@ export type GameCardProps = {
 };
 
 export const GameCard: React.FC<GameCardProps> = ({ game }) => {
-  const { image, genre, name, price, isNew } = game;
+  const { id, image, genre, name, price, isNew } = game;
+  const { cart, dispatch } = useCartContext();
+  const isInCart = cart.some((item) => item.id === game.id);
+
+  const addToCart = () => {
+    dispatch({ type: 'ADD_TO_CART', payload: game });
+  };
+
+  const removeFromCart = () => {
+    dispatch({ type: 'REMOVE_FROM_CART', payload: id });
+  };
 
   return (
     <div className="flex flex-col gap-y-5 rounded-2xl border-[0.5px] border-[#8F8F8F] p-6">
@@ -29,8 +42,9 @@ export const GameCard: React.FC<GameCardProps> = ({ game }) => {
       <button
         type="button"
         className="rounded-lg border border-[#3B3B3B] px-6 py-4 font-bold tracking-[0.5px] text-[#3B3B3B]"
+        onClick={isInCart ? removeFromCart : addToCart}
       >
-        ADD TO CART
+        {isInCart ? 'REMOVE' : 'ADD TO CART'}
       </button>
     </div>
   );

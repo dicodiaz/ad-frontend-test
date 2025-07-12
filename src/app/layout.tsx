@@ -1,4 +1,5 @@
 import { Footer, Navbar } from '@/components';
+import { CartProvider } from '@/context';
 import type { Metadata } from 'next';
 import './globals.css';
 
@@ -14,11 +15,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-area flex min-h-dvh flex-col">
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
+      <CartProvider>
+        <body className="font-area flex min-h-dvh flex-col">
+          <Navbar />
+          {children}
+          <Footer />
+        </body>
+      </CartProvider>
     </html>
   );
 }
