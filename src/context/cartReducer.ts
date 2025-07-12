@@ -1,4 +1,5 @@
 import { Game } from '@/utils/endpoint';
+import { CartState } from '.';
 
 export type SetCartAction = {
   type: 'SET_CART';
@@ -17,22 +18,24 @@ export type RemoveFromCartAction = {
 
 export type CartAction = SetCartAction | AddToCartAction | RemoveFromCartAction;
 
-export const cartReducer = (state: Game[], action: CartAction) => {
+export type ReducerState = Omit<CartState, 'dispatch'>;
+
+export const cartReducer = (state: ReducerState, action: CartAction): ReducerState => {
   switch (action.type) {
     case 'SET_CART': {
-      return action.payload;
+      return { ...state, cart: action.payload, loading: false };
     }
 
     case 'ADD_TO_CART': {
-      const newState = [...state, action.payload];
-      localStorage.setItem('cart', JSON.stringify(newState));
-      return newState;
+      const newCart = [...state.cart, action.payload];
+      localStorage.setItem('cart', JSON.stringify(newCart));
+      return { ...state, cart: newCart };
     }
 
     case 'REMOVE_FROM_CART': {
-      const newState = state.filter((game) => game.id !== action.payload);
-      localStorage.setItem('cart', JSON.stringify(newState));
-      return newState;
+      const newCart = state.cart.filter((game) => game.id !== action.payload);
+      localStorage.setItem('cart', JSON.stringify(newCart));
+      return { ...state, cart: newCart };
     }
   }
 };

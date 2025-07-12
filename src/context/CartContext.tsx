@@ -7,26 +7,26 @@ import { CartAction, cartReducer } from '.';
 export type CartState = {
   cart: Game[];
   dispatch: React.Dispatch<CartAction>;
+  loading: boolean;
 };
 
 export const initialState: CartState = {
   cart: [],
   dispatch: () => {},
+  loading: true,
 };
 
 export const CartContext = createContext(initialState);
 
 export const CartProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
-  const [cart, dispatch] = useReducer(cartReducer, initialState.cart);
+  const { cart, loading } = initialState;
+  const [state, dispatch] = useReducer(cartReducer, { cart, loading });
 
   useEffect(() => {
-    const storedCart = localStorage.getItem('cart');
-    if (storedCart) {
-      dispatch({ type: 'SET_CART', payload: JSON.parse(storedCart) });
-    }
+    dispatch({ type: 'SET_CART', payload: JSON.parse(localStorage.getItem('cart') ?? '[]') });
   }, []);
 
-  return <CartContext.Provider value={{ cart, dispatch }}>{children}</CartContext.Provider>;
+  return <CartContext.Provider value={{ dispatch, ...state }}>{children}</CartContext.Provider>;
 };
 
 export const useCartContext = () => useContext(CartContext);

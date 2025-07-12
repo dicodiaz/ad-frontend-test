@@ -2,6 +2,7 @@
 
 import { useCartContext } from '@/context';
 import { Game } from '@/utils/endpoint';
+import { ImSpinner2 } from 'react-icons/im';
 
 export type GameCardProps = {
   game: Game;
@@ -9,7 +10,7 @@ export type GameCardProps = {
 
 export const GameCard: React.FC<GameCardProps> = ({ game }) => {
   const { id, image, genre, name, price, isNew } = game;
-  const { cart, dispatch } = useCartContext();
+  const { cart, dispatch, loading } = useCartContext();
   const isInCart = cart.some((item) => item.id === game.id);
 
   const addToCart = () => {
@@ -41,10 +42,17 @@ export const GameCard: React.FC<GameCardProps> = ({ game }) => {
       </div>
       <button
         type="button"
-        className="rounded-lg border border-[#3B3B3B] px-6 py-4 font-bold tracking-[0.5px] text-[#3B3B3B]"
+        className="flex justify-center rounded-lg border border-[#3B3B3B] px-6 py-4 font-bold tracking-[0.5px] text-[#3B3B3B]"
         onClick={isInCart ? removeFromCart : addToCart}
+        disabled={loading}
       >
-        {isInCart ? 'REMOVE' : 'ADD TO CART'}
+        {loading ? (
+          <ImSpinner2 className="size-6 animate-spin" />
+        ) : isInCart ? (
+          'REMOVE'
+        ) : (
+          'ADD TO CART'
+        )}
       </button>
     </div>
   );
