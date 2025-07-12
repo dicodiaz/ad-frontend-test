@@ -18,10 +18,10 @@ export const SeeMoreButton: React.FC<SeeMoreButtonProps> = ({ currentPage }) => 
   };
 
   return (
-    <div className="px-6">
+    <div className="px-6 md:px-20 xl:px-32">
       <button
         type="button"
-        className="w-full rounded-lg bg-[#585660] py-4 text-sm leading-4 tracking-[0.5px] text-white"
+        className="w-full rounded-lg bg-[#585660] px-6 py-4 text-sm leading-4 tracking-[0.5px] text-white md:w-auto"
         onClick={handleSeeMore}
       >
         SEE MORE
