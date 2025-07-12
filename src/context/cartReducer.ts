@@ -16,7 +16,11 @@ export type RemoveFromCartAction = {
   payload: Game['id'];
 };
 
-export type CartAction = SetCartAction | AddToCartAction | RemoveFromCartAction;
+export type ClearCartAction = {
+  type: 'CLEAR_CART';
+};
+
+export type CartAction = SetCartAction | AddToCartAction | RemoveFromCartAction | ClearCartAction;
 
 export type ReducerState = Omit<CartState, 'dispatch'>;
 
@@ -36,6 +40,11 @@ export const cartReducer = (state: ReducerState, action: CartAction): ReducerSta
       const newCart = state.cart.filter((game) => game.id !== action.payload);
       localStorage.setItem('cart', JSON.stringify(newCart));
       return { ...state, cart: newCart };
+    }
+
+    case 'CLEAR_CART': {
+      localStorage.setItem('cart', JSON.stringify([]));
+      return { ...state, cart: [] };
     }
   }
 };

@@ -1,7 +1,8 @@
 'use client';
 
 import { useCartContext } from '@/context';
-import { CartItem } from '.';
+import Link from 'next/link';
+import { CartItem, OrderSummary } from '.';
 
 export const Cart: React.FC = () => {
   const { cart } = useCartContext();
@@ -18,6 +19,17 @@ export const Cart: React.FC = () => {
         {cart.map((game) => (
           <CartItem key={game.id} game={game} />
         ))}
+      </div>
+      <div className="flex flex-col gap-y-10">
+        <OrderSummary />
+        <Link href="/checkout">
+          <button
+            type="button"
+            className="w-full rounded-lg bg-[#585660] px-6 py-4 text-sm font-bold leading-4 tracking-[0.5px] text-white"
+          >
+            Checkout
+          </button>
+        </Link>
       </div>
     </section>
   );
