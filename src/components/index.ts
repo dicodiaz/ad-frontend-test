@@ -8,3 +8,4 @@ export * from './GameCard';
 export * from './GenreSelect';
 export * from './Navbar';
 export * from './OrderSummary';
+export * from './SeeMoreButton';

@@ -19,6 +19,7 @@ export const GenreSelect: React.FC<GenreSelectProps> = ({ availableFilters }) =>
     } else {
       params.set('genre', genre);
     }
+    params.delete('page');
     router.push(`?${params.toString()}`);
   };
 

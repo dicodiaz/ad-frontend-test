@@ -1,12 +1,16 @@
 import { getDataFromServer } from '@/services';
-import { GameCard, GenreSelect } from '.';
+import { GameCard, GenreSelect, SeeMoreButton } from '.';
 
 export type CatalogProps = {
   genre?: string;
+  currentPage: number;
 };
 
-export const Catalog: React.FC<CatalogProps> = async ({ genre }) => {
-  const { games, availableFilters } = await getDataFromServer({ genre });
+export const Catalog: React.FC<CatalogProps> = async ({ genre, currentPage }) => {
+  const { games, availableFilters, totalPages } = await getDataFromServer({
+    genre,
+    page: currentPage,
+  });
 
   return (
     <section className="flex flex-col gap-y-2">
@@ -19,14 +23,7 @@ export const Catalog: React.FC<CatalogProps> = async ({ genre }) => {
           ))}
         </div>
       </div>
-      <div className="px-6">
-        <button
-          type="button"
-          className="w-full rounded-lg bg-[#585660] py-4 text-sm leading-4 tracking-[0.5px] text-white"
-        >
-          SEE MORE
-        </button>
-      </div>
+      {currentPage < totalPages && <SeeMoreButton currentPage={currentPage} />}
     </section>
   );
 };
