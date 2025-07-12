@@ -1,8 +1,12 @@
 import { getDataFromServer } from '@/services';
 import { GameCard, GenreSelect } from '.';
 
-export const Catalog: React.FC = async () => {
-  const { games, availableFilters } = await getDataFromServer();
+export type CatalogProps = {
+  genre?: string;
+};
+
+export const Catalog: React.FC<CatalogProps> = async ({ genre }) => {
+  const { games, availableFilters } = await getDataFromServer({ genre });
 
   return (
     <section className="flex flex-col gap-y-2">

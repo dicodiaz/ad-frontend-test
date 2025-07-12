@@ -29,6 +29,7 @@ export const GenreSelect: React.FC<GenreSelectProps> = ({ availableFilters }) =>
       <select
         name="genre"
         className="flex-1 text-xl leading-6 tracking-wide"
+        defaultValue={searchParams.get('genre') ?? 'all'}
         onChange={handleGenreChange}
       >
         <option value="all">All</option>
