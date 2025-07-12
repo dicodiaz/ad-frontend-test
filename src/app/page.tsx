@@ -10,7 +10,7 @@ export default async function Home(props: {
 
   return (
     <main className="flex flex-1 flex-col gap-y-8 py-8">
-      <h1 className="px-6 text-2xl font-bold leading-7 tracking-wide text-[#3B3B3B]">
+      <h1 className="px-6 text-2xl font-bold leading-7 tracking-wide text-[#3B3B3B] md:px-20 md:text-3xl xl:px-32 xl:text-4xl">
         TOP SELLERS
       </h1>
       <Suspense fallback={<CatalogFallback />}>

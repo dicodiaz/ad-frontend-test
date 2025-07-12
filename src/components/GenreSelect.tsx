@@ -24,12 +24,12 @@ export const GenreSelect: React.FC<GenreSelectProps> = ({ availableFilters }) =>
   };
 
   return (
-    <label className="flex gap-x-6 px-6 py-4">
-      <span className="text-xl font-bold leading-6 tracking-wide">Genre</span>
+    <label className="flex gap-x-6 px-6 py-4 text-xl leading-6 tracking-wide md:justify-end md:px-20 xl:px-32">
+      <span className="font-bold">Genre</span>
       <div className="my-[1px] w-px bg-[#3B3B3B]" />
       <select
         name="genre"
-        className="flex-1 text-xl leading-6 tracking-wide"
+        className="flex-grow md:flex-grow-0"
         defaultValue={searchParams.get('genre') ?? 'all'}
         onChange={handleGenreChange}
       >
