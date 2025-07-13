@@ -31,7 +31,7 @@ export const GameCard: React.FC<GameCardProps> = ({ game }) => {
               New
             </div>
           )}
-          <Image src={image} alt={name} width={654} height={240} />
+          <Image src={image} alt={name} width={654} height={240} className="h-full object-cover" />
         </div>
         <div className="flex flex-col gap-y-3">
           <span className="font-bold text-[#737373]">{genre.toUpperCase()}</span>
