@@ -28,7 +28,7 @@ export const Cart: React.FC = () => {
           <Link href="/checkout">
             <button
               type="button"
-              className="w-full rounded-lg bg-[#585660] px-6 py-4 text-sm font-bold leading-4 tracking-[0.5px] text-white"
+              className="w-full rounded-lg bg-[#585660] px-6 py-4 text-sm font-bold leading-4 tracking-[0.5px] text-white md:text-base"
             >
               Checkout
             </button>

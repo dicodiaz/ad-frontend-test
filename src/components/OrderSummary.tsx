@@ -7,7 +7,9 @@ export const OrderSummary: React.FC = () => {
   return (
     <div className="flex flex-col gap-y-6 rounded-lg border-[0.5px] border-[#8F8F8F] px-4 py-6">
       <div className="flex flex-col gap-y-3">
-        <h3 className="text-xl font-bold leading-6 tracking-wide text-[#3B3B3B]">Order Summary</h3>
+        <h3 className="text-xl font-bold leading-6 tracking-wide text-[#3B3B3B] md:text-2xl md:leading-7">
+          Order Summary
+        </h3>
         <span className="text-lg leading-6 tracking-wide">
           {cart.length} {cart.length === 1 ? 'item' : 'items'}
         </span>
