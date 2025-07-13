@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <CartProvider>
-        <body className="font-area flex min-h-dvh flex-col">
+        <body className="font-area flex min-h-dvh flex-col overflow-y-scroll">
           <Navbar />
           {children}
           <Footer />

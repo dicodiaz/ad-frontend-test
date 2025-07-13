@@ -1,10 +1,9 @@
 'use client';
 
-import { Data } from '@/services';
 import { useRouter, useSearchParams } from 'next/navigation';
 
 export type GenreSelectProps = {
-  availableFilters: Data['availableFilters'];
+  availableFilters: string[];
 };
 
 export const GenreSelect: React.FC<GenreSelectProps> = ({ availableFilters }) => {
