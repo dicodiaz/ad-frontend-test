@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Footer renders Footer unchanged 1`] = `
+<div>
+  <footer
+    class="flex justify-center bg-[#404040] px-6 py-16"
+  >
+    <a
+      href="/"
+    >
+      <img
+        alt="Apply Digital Logo"
+        data-nimg="1"
+        decoding="async"
+        height="45"
+        loading="lazy"
+        src="ApplyDigitalLogo.svg"
+        style="color: transparent;"
+        width="171"
+      />
+    </a>
+  </footer>
+</div>
+`;

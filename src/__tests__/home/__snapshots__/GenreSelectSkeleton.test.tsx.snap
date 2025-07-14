@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`GenreSelectSkeleton renders GenreSelectSkeleton unchanged 1`] = `
+<div>
+  <div
+    class="h-[25px] flex-grow animate-pulse rounded bg-gray-200 md:w-[181.5px] md:flex-grow-0"
+  />
+</div>
+`;
