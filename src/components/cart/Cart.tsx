@@ -13,9 +13,9 @@ export const Cart: React.FC = () => {
         <h1 className="text-2xl font-bold leading-7 tracking-wide md:text-3xl xl:text-4xl">
           Your cart
         </h1>
-        <span className="text-xl leading-6 tracking-wide md:text-2xl md:leading-7">
+        <h2 className="text-xl leading-6 tracking-wide md:text-2xl md:leading-7">
           {cart.length} {cart.length === 1 ? 'item' : 'items'}
-        </span>
+        </h2>
       </div>
       <div className="flex flex-col gap-y-8 md:flex-row md:gap-x-10 xl:gap-x-20">
         <div className="flex flex-col md:flex-grow">

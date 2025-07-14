@@ -13,20 +13,127 @@ exports[`Cart renders Cart unchanged 1`] = `
       >
         Your cart
       </h1>
-      <span
+      <h2
         class="text-xl leading-6 tracking-wide md:text-2xl md:leading-7"
       >
-        0
+        1
          
-        items
-      </span>
+        item
+      </h2>
     </div>
     <div
       class="flex flex-col gap-y-8 md:flex-row md:gap-x-10 xl:gap-x-20"
     >
       <div
         class="flex flex-col md:flex-grow"
-      />
+      >
+        <div
+          class="flex flex-col gap-y-4 px-4 py-5 md:flex-row md:gap-x-6 [&~&]:border-t-[0.5px] [&~&]:border-[#8F8F8F]"
+          data-testid="cart-item"
+        >
+          <div
+            class="relative flex gap-x-3 md:w-2/5 md:flex-none"
+          >
+            <div
+              class="absolute left-3 top-3 rounded bg-[#F5F5F4] px-3 py-2 leading-4 tracking-wide"
+            >
+              New
+            </div>
+            <img
+              alt="Cyberpunk 2077"
+              class="h-[136px] object-cover md:h-auto"
+              data-nimg="1"
+              decoding="async"
+              height="240"
+              loading="lazy"
+              src="/_next/image?url=%2Fgame-images%2Fcyberpunk2077.jpeg&w=1920&q=75"
+              srcset="/_next/image?url=%2Fgame-images%2Fcyberpunk2077.jpeg&w=750&q=75 1x, /_next/image?url=%2Fgame-images%2Fcyberpunk2077.jpeg&w=1920&q=75 2x"
+              style="color: transparent;"
+              width="654"
+            />
+            <div
+              class="md:hidden"
+            >
+              <button
+                class="p-1"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="size-5 text-[#8F8F8F]"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 20 20"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-y-3 md:py-2"
+          >
+            <span
+              class="text-sm font-bold leading-4 text-[#737373]"
+            >
+              Action
+            </span>
+            <div
+              class="flex flex-col gap-y-2"
+            >
+              <h4
+                class="text-lg font-bold leading-5 tracking-wide text-[#3B3B3B] md:text-xl md:leading-6"
+              >
+                Cyberpunk 2077
+              </h4>
+              <span
+                class="min-h-[60px] leading-5 text-[#737373]"
+              >
+                An open-world, action-adventure story set in Night City.
+              </span>
+            </div>
+            <div
+              class="flex justify-end text-lg font-bold leading-5 tracking-wide text-[#3B3B3B] md:text-xl md:leading-6"
+            >
+              $59.99
+            </div>
+          </div>
+          <div
+            class="hidden md:block"
+          >
+            <button
+              class="p-1"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="size-5 text-[#8F8F8F]"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 20 20"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
       <div
         class="flex flex-col gap-y-10 md:w-2/5 md:flex-none"
       >
@@ -44,9 +151,9 @@ exports[`Cart renders Cart unchanged 1`] = `
             <span
               class="text-lg leading-6 tracking-wide"
             >
-              0
+              1
                
-              items
+              item
             </span>
           </div>
           <div
@@ -54,7 +161,18 @@ exports[`Cart renders Cart unchanged 1`] = `
           >
             <div
               class="flex flex-col gap-y-3"
-            />
+            >
+              <div
+                class="flex items-center justify-between gap-x-3 text-lg leading-6 tracking-wide"
+              >
+                <span>
+                  Cyberpunk 2077
+                </span>
+                <span>
+                  $59.99
+                </span>
+              </div>
+            </div>
             <div
               class="h-px bg-[#8F8F8F] opacity-50"
             />
@@ -65,7 +183,7 @@ exports[`Cart renders Cart unchanged 1`] = `
                 Order total
               </h4>
               <span>
-                $0.00
+                $59.99
               </span>
             </div>
           </div>

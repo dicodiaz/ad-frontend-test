@@ -3,15 +3,15 @@ import { useCartContext } from '@/context';
 import { allGames } from '@/utils/endpoint';
 import { fireEvent, render, screen } from '@testing-library/react';
 
-jest.mock('@/context', () => ({
+jest.mock('@/context/CartContext', () => ({
   useCartContext: jest.fn(),
 }));
 
 const mockDispatch = jest.fn();
 
-const mockCartContextReturnValue = { cart: [], dispatch: mockDispatch, loading: false };
-
 const mockGame = allGames[0];
+
+const mockCartContextReturnValue = { cart: [], dispatch: mockDispatch, loading: false };
 
 describe('GameCard', () => {
   beforeEach(() => {
@@ -23,7 +23,12 @@ describe('GameCard', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('does not show "New" label if isNew is false', () => {
+  it('displays the "New" badge if isNew is true', () => {
+    const { container } = render(<GameCard game={mockGame} />);
+    expect(screen.getByText('New')).toBeInTheDocument();
+  });
+
+  it('does not display the "New" badge if isNew is false', () => {
     render(<GameCard game={{ ...mockGame, isNew: false }} />);
     expect(screen.queryByText('New')).not.toBeInTheDocument();
   });

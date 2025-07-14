@@ -16,7 +16,10 @@ export const CartItem: React.FC<CartItemProps> = ({ game }) => {
   };
 
   return (
-    <div className="flex flex-col gap-y-4 px-4 py-5 md:flex-row md:gap-x-6 [&~&]:border-t-[0.5px] [&~&]:border-[#8F8F8F]">
+    <div
+      className="flex flex-col gap-y-4 px-4 py-5 md:flex-row md:gap-x-6 [&~&]:border-t-[0.5px] [&~&]:border-[#8F8F8F]"
+      data-testid="cart-item"
+    >
       <div className="relative flex gap-x-3 md:w-2/5 md:flex-none">
         {isNew && (
           <div className="absolute left-3 top-3 rounded bg-[#F5F5F4] px-3 py-2 leading-4 tracking-wide">
