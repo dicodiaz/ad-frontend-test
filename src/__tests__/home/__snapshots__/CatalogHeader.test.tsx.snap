@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`CatalogHeader renders CatalogHeader unchanged 1`] = `
+<div>
+  <header
+    class="flex flex-col gap-y-8 border-b border-[#EFEDF3] px-6 py-8 md:gap-y-10 md:px-20 md:py-10 xl:gap-y-12 xl:px-32 xl:py-12"
+  >
+    <h1
+      class="text-2xl font-bold leading-7 tracking-wide text-[#3B3B3B] md:text-3xl xl:text-4xl"
+    >
+      TOP SELLERS
+    </h1>
+    <label
+      class="flex gap-x-6 py-4 text-xl leading-6 tracking-wide md:justify-end"
+    >
+      <span
+        class="font-bold"
+      >
+        Genre
+      </span>
+      <div
+        class="my-[1px] w-px bg-[#3B3B3B]"
+      />
+      <select
+        class="flex-grow md:flex-grow-0"
+        name="genre"
+      >
+        <option
+          selected=""
+          value="all"
+        >
+          All
+        </option>
+        <option
+          value="Action"
+        >
+          Action
+        </option>
+        <option
+          value="Action-Adventure"
+        >
+          Action-Adventure
+        </option>
+        <option
+          value="Adventure"
+        >
+          Adventure
+        </option>
+        <option
+          value="Battle Royale"
+        >
+          Battle Royale
+        </option>
+        <option
+          value="Horror"
+        >
+          Horror
+        </option>
+        <option
+          value="Indie"
+        >
+          Indie
+        </option>
+        <option
+          value="MMORPG"
+        >
+          MMORPG
+        </option>
+        <option
+          value="MOBA"
+        >
+          MOBA
+        </option>
+        <option
+          value="Puzzle"
+        >
+          Puzzle
+        </option>
+        <option
+          value="Racing"
+        >
+          Racing
+        </option>
+        <option
+          value="RPG"
+        >
+          RPG
+        </option>
+        <option
+          value="Shooter"
+        >
+          Shooter
+        </option>
+        <option
+          value="Simulation"
+        >
+          Simulation
+        </option>
+        <option
+          value="Sports"
+        >
+          Sports
+        </option>
+        <option
+          value="Strategy"
+        >
+          Strategy
+        </option>
+      </select>
+    </label>
+  </header>
+</div>
+`;

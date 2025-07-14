@@ -23,7 +23,7 @@ export const GameCard: React.FC<GameCardProps> = ({ game }) => {
   };
 
   return (
-    <div className="md:w-1/2 md:px-5 xl:w-1/3 xl:flex-none xl:px-6">
+    <div className="md:w-1/2 md:px-5 xl:w-1/3 xl:flex-none xl:px-6" data-testid="game-card">
       <div className="flex flex-col gap-y-5 rounded-2xl border-[0.5px] border-[#8F8F8F] p-6">
         <div className="relative overflow-hidden rounded-t-2xl md:h-60">
           {isNew && (
@@ -44,6 +44,7 @@ export const GameCard: React.FC<GameCardProps> = ({ game }) => {
         </div>
         <button
           type="button"
+          aria-label={isInCart ? 'REMOVE' : 'ADD TO CART'}
           className="flex justify-center rounded-lg border border-[#3B3B3B] px-6 py-4 font-bold tracking-[0.5px] text-[#3B3B3B]"
           onClick={isInCart ? removeFromCart : addToCart}
           disabled={loading}

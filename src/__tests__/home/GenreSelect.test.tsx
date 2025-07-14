@@ -32,7 +32,7 @@ describe('GenreSelect', () => {
   });
 
   it('removes genre param if "all" is selected', () => {
-    (globalThis as any).mockSearchParams = new URLSearchParams('genre=Comedy');
+    (globalThis as any).mockSearchParams = new URLSearchParams('genre=Action');
     render(<GenreSelect availableFilters={availableFilters} />);
     fireEvent.change(screen.getByRole('combobox'), { target: { value: 'all' } });
 
