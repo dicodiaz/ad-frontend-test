@@ -15,11 +15,13 @@ export const Catalog: React.FC<CatalogProps> = ({ data, genre }) => {
   const [games, setGames] = useState(initialGames);
   const [loading, setLoading] = useState(false);
   const page = useRef(currentPage);
+  const stringifiedGames = JSON.stringify(initialGames);
 
   useEffect(() => {
     setGames(initialGames);
     page.current = currentPage;
-  }, [JSON.stringify(initialGames)]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [stringifiedGames]);
 
   const handleSeeMore = async () => {
     setLoading(true);
@@ -39,7 +41,7 @@ export const Catalog: React.FC<CatalogProps> = ({ data, genre }) => {
       {(page.current < totalPages || loading) && (
         <button
           type="button"
-          className="flex w-full cursor-pointer justify-center rounded-lg bg-[#585660] px-6 py-4 text-sm leading-4 tracking-[0.5px] text-white md:w-[136.5px] md:text-base md:leading-4"
+          className="flex w-full justify-center rounded-lg bg-[#585660] px-6 py-4 text-sm leading-4 tracking-[0.5px] text-white md:w-[136.5px] md:text-base md:leading-4"
           onClick={handleSeeMore}
           disabled={loading}
         >

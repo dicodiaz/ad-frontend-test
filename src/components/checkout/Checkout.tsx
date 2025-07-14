@@ -8,6 +8,7 @@ export const Checkout = () => {
 
   useEffect(() => {
     dispatch({ type: 'CLEAR_CART' });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
