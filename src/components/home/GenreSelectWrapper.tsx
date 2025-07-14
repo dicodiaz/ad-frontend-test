@@ -1,4 +1,4 @@
-import { getAvailableFiltersFromServer } from '@/services/getAvailableFiltersFromServer';
+import { getAvailableFiltersFromServer } from '@/services';
 import { GenreSelect } from '.';
 
 export const GenreSelectWrapper: React.FC = async () => {

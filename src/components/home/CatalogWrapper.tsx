@@ -8,5 +8,5 @@ export type CatalogWrapperProps = {
 export const CatalogWrapper: React.FC<CatalogWrapperProps> = async ({ genre }) => {
   const data = await getDataFromServer({ genre });
 
-  return <Catalog data={data} />;
+  return <Catalog data={data} genre={genre} />;
 };
