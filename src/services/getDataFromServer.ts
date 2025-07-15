@@ -1,4 +1,5 @@
 import { Game } from '@/utils/endpoint';
+import { getBaseUrl } from '.';
 
 export type Data = {
   games: Game[];
@@ -13,7 +14,6 @@ export const getDataFromServer = async ({
   genre?: string;
   page?: number;
 }): Promise<Data> => {
-  const BASE_URL = process.env.API_BASE_URL ?? 'http://localhost:3000/api';
   const searchParams = new URLSearchParams();
   if (genre) {
     searchParams.set('genre', genre);
@@ -21,7 +21,7 @@ export const getDataFromServer = async ({
   if (page) {
     searchParams.set('page', page.toString());
   }
-  const res = await fetch(`${BASE_URL}/games?${searchParams.toString()}`);
+  const res = await fetch(`${getBaseUrl()}/api/games?${searchParams.toString()}`);
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }
