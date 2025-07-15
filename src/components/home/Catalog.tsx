@@ -1,5 +1,6 @@
 'use client';
 
+import { useLiveAnnounce } from '@/hooks/useLiveAnnounce';
 import { Data, getDataFromServer } from '@/services';
 import { useEffect, useRef, useState } from 'react';
 import { ImSpinner2 } from 'react-icons/im';
@@ -12,9 +13,11 @@ export type CatalogProps = {
 
 export const Catalog: React.FC<CatalogProps> = ({ data, genre }) => {
   const { games: initialGames, currentPage, totalPages } = data;
+  const { liveAnnounce } = useLiveAnnounce();
   const [games, setGames] = useState(initialGames);
   const [loading, setLoading] = useState(false);
   const page = useRef(currentPage);
+  const firstNewGameId = useRef<string | undefined>(undefined);
   const stringifiedGames = JSON.stringify(initialGames);
 
   useEffect(() => {
@@ -25,9 +28,12 @@ export const Catalog: React.FC<CatalogProps> = ({ data, genre }) => {
 
   const handleSeeMore = async () => {
     setLoading(true);
+    liveAnnounce('Loading, please wait');
     page.current += 1;
     const { games: newGames } = await getDataFromServer({ genre, page: page.current });
+    firstNewGameId.current = newGames.at(0)?.id;
     setGames((prevGames) => [...prevGames, ...newGames]);
+    liveAnnounce('');
     setLoading(false);
   };
 
@@ -35,7 +41,7 @@ export const Catalog: React.FC<CatalogProps> = ({ data, genre }) => {
     <section className="flex flex-col gap-y-8 px-6 py-8 md:gap-y-10 md:px-20 md:py-10 xl:gap-y-12 xl:px-32 xl:py-12">
       <div className="flex flex-col gap-y-6 md:-mx-5 md:flex-row md:flex-wrap md:gap-y-9 xl:-mx-6 xl:gap-y-12">
         {games.map((game) => (
-          <GameCard key={game.id} game={game} />
+          <GameCard key={game.id} game={game} firstNewGameId={firstNewGameId.current} />
         ))}
       </div>
       {(page.current < totalPages || loading) && (

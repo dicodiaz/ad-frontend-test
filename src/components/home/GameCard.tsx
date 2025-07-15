@@ -4,16 +4,26 @@ import { NewBadge } from '@/components/common';
 import { useCartContext } from '@/context';
 import { Game } from '@/utils/endpoint';
 import Image from 'next/image';
+import { useEffect, useRef } from 'react';
 import { ImSpinner2 } from 'react-icons/im';
 
 export type GameCardProps = {
   game: Game;
+  firstNewGameId?: string;
 };
 
-export const GameCard: React.FC<GameCardProps> = ({ game }) => {
+export const GameCard: React.FC<GameCardProps> = ({ game, firstNewGameId }) => {
   const { id, image, genre, name, price, isNew } = game;
   const { cart, dispatch, loading } = useCartContext();
   const isInCart = cart.some((item) => item.id === game.id);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (game.id === firstNewGameId) {
+      buttonRef.current?.focus();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const addToCart = () => {
     dispatch({ type: 'ADD_TO_CART', payload: game });
@@ -45,6 +55,7 @@ export const GameCard: React.FC<GameCardProps> = ({ game }) => {
           className="cta-stroke-primary"
           onClick={isInCart ? removeFromCart : addToCart}
           disabled={loading}
+          ref={buttonRef}
         >
           {loading ? (
             <ImSpinner2 className="size-6 animate-spin" />
