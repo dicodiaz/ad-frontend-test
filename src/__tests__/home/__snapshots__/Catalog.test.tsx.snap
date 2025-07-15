@@ -47,11 +47,11 @@ exports[`Catalog renders Catalog unchanged 1`] = `
             <div
               class="flex items-center justify-between gap-x-3 md:min-h-[60px]"
             >
-              <h4
+              <h2
                 class="text-primary text-lg font-bold leading-5 tracking-wide"
               >
                 Cyberpunk 2077
-              </h4>
+              </h2>
               <span
                 class="text-primary text-xl font-bold leading-6 tracking-wide"
               >
@@ -60,7 +60,7 @@ exports[`Catalog renders Catalog unchanged 1`] = `
             </div>
           </div>
           <button
-            aria-label="ADD TO CART"
+            aria-label="Add to cart, Cyberpunk 2077"
             class="cta-stroke-primary"
             disabled=""
             type="button"
@@ -117,11 +117,11 @@ exports[`Catalog renders Catalog unchanged 1`] = `
             <div
               class="flex items-center justify-between gap-x-3 md:min-h-[60px]"
             >
-              <h4
+              <h2
                 class="text-primary text-lg font-bold leading-5 tracking-wide"
               >
                 The Witcher 3: Wild Hunt
-              </h4>
+              </h2>
               <span
                 class="text-primary text-xl font-bold leading-6 tracking-wide"
               >
@@ -130,7 +130,7 @@ exports[`Catalog renders Catalog unchanged 1`] = `
             </div>
           </div>
           <button
-            aria-label="ADD TO CART"
+            aria-label="Add to cart, The Witcher 3: Wild Hunt"
             class="cta-stroke-primary"
             disabled=""
             type="button"
@@ -155,7 +155,7 @@ exports[`Catalog renders Catalog unchanged 1`] = `
       </div>
     </div>
     <button
-      aria-label="SEE MORE"
+      aria-label="See more games"
       class="cta-fill-primary md:w-[136.5px]"
       type="button"
     >

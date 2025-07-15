@@ -35,9 +35,9 @@ describe('Cart', () => {
 
     expect(screen.getByRole('heading', { name: '2 items', level: 2 })).toBeInTheDocument();
     expect(screen.getAllByTestId('cart-item')).toHaveLength(2);
-    expect(screen.getByRole('heading', { name: 'Cyberpunk 2077', level: 4 })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Cyberpunk 2077', level: 3 })).toBeInTheDocument();
     expect(
-      screen.getByRole('heading', { name: 'The Witcher 3: Wild Hunt', level: 4 }),
+      screen.getByRole('heading', { name: 'The Witcher 3: Wild Hunt', level: 3 }),
     ).toBeInTheDocument();
   });
 

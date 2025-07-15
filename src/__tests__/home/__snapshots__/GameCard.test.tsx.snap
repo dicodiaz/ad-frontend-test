@@ -41,11 +41,11 @@ exports[`GameCard renders GameCard unchanged 1`] = `
         <div
           class="flex items-center justify-between gap-x-3 md:min-h-[60px]"
         >
-          <h4
+          <h2
             class="text-primary text-lg font-bold leading-5 tracking-wide"
           >
             Cyberpunk 2077
-          </h4>
+          </h2>
           <span
             class="text-primary text-xl font-bold leading-6 tracking-wide"
           >
@@ -54,7 +54,7 @@ exports[`GameCard renders GameCard unchanged 1`] = `
         </div>
       </div>
       <button
-        aria-label="ADD TO CART"
+        aria-label="Add to cart, Cyberpunk 2077"
         class="cta-stroke-primary"
         type="button"
       >

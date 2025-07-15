@@ -22,8 +22,8 @@ exports[`CatalogHeader renders CatalogHeader unchanged 1`] = `
         class="bg-primary my-[1px] w-px"
       />
       <select
+        aria-label="Select genre"
         class="flex-grow md:flex-grow-0"
-        name="genre"
       >
         <option
           selected=""

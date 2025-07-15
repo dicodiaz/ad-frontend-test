@@ -24,7 +24,7 @@ export const GenreSelect: React.FC<GenreSelectProps> = ({ availableFilters }) =>
 
   return (
     <select
-      name="genre"
+      aria-label="Select genre"
       className="flex-grow md:flex-grow-0"
       defaultValue={searchParams.get('genre') ?? 'all'}
       onChange={handleGenreChange}

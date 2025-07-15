@@ -17,7 +17,7 @@ describe('Catalog', () => {
 
   it('hides SEE MORE if all pages are loaded', () => {
     render(<Catalog data={{ ...mockInitialData, currentPage: 3 }} />);
-    expect(screen.queryByRole('button', { name: 'SEE MORE' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'See more games' })).not.toBeInTheDocument();
   });
 
   it('calls getDataFromServer and appends new games on SEE MORE click', async () => {
@@ -26,7 +26,7 @@ describe('Catalog', () => {
     });
 
     render(<Catalog data={mockInitialData} genre="Action" />);
-    fireEvent.click(screen.getByRole('button', { name: 'SEE MORE' }));
+    fireEvent.click(screen.getByRole('button', { name: 'See more games' }));
 
     expect(getDataFromServer).toHaveBeenCalledWith({ genre: 'Action', page: 2 });
 
@@ -45,16 +45,16 @@ describe('Catalog', () => {
     (getDataFromServer as jest.Mock).mockReturnValueOnce(promise);
 
     render(<Catalog data={mockInitialData} />);
-    fireEvent.click(screen.getByText('SEE MORE'));
+    fireEvent.click(screen.getByRole('button', { name: 'See more games' }));
 
-    expect(screen.getByRole('button', { name: 'SEE MORE' })).toBeDisabled();
+    expect(screen.getByRole('button', { name: 'See more games' })).toBeDisabled();
     expect(
-      screen.getByRole('button', { name: 'SEE MORE' }).querySelector('svg'),
+      screen.getByRole('button', { name: 'See more games' }).querySelector('svg'),
     ).toBeInTheDocument();
 
     resolvePromise({ games: [] });
     await waitFor(() => {
-      expect(screen.getByRole('button', { name: 'SEE MORE' })).not.toBeDisabled();
+      expect(screen.getByRole('button', { name: 'See more games' })).not.toBeDisabled();
     });
   });
 

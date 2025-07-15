@@ -41,7 +41,7 @@ export const Catalog: React.FC<CatalogProps> = ({ data, genre }) => {
       {(page.current < totalPages || loading) && (
         <button
           type="button"
-          aria-label="SEE MORE"
+          aria-label="See more games"
           className="cta-fill-primary md:w-[136.5px]"
           onClick={handleSeeMore}
           disabled={loading}

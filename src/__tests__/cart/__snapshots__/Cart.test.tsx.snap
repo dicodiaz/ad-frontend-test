@@ -55,6 +55,7 @@ exports[`Cart renders Cart unchanged 1`] = `
               class="md:hidden"
             >
               <button
+                aria-label="Remove, Cyberpunk 2077"
                 class="p-1"
                 type="button"
               >
@@ -89,11 +90,11 @@ exports[`Cart renders Cart unchanged 1`] = `
             <div
               class="flex flex-col gap-y-2"
             >
-              <h4
+              <h3
                 class="text-primary text-lg font-bold leading-5 tracking-wide md:text-xl md:leading-6"
               >
                 Cyberpunk 2077
-              </h4>
+              </h3>
               <span
                 class="min-h-[60px] leading-5 text-neutral-500"
               >
@@ -110,6 +111,7 @@ exports[`Cart renders Cart unchanged 1`] = `
             class="hidden md:block"
           >
             <button
+              aria-label="Remove, Cyberpunk 2077"
               class="p-1"
               type="button"
             >

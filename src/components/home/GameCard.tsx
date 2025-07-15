@@ -33,7 +33,7 @@ export const GameCard: React.FC<GameCardProps> = ({ game }) => {
         <div className="flex flex-col gap-y-3">
           <span className="font-bold text-neutral-500">{genre.toUpperCase()}</span>
           <div className="flex items-center justify-between gap-x-3 md:min-h-[60px]">
-            <h4 className="text-primary text-lg font-bold leading-5 tracking-wide">{name}</h4>
+            <h2 className="text-primary text-lg font-bold leading-5 tracking-wide">{name}</h2>
             <span className="text-primary text-xl font-bold leading-6 tracking-wide">
               {price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
             </span>
@@ -41,7 +41,7 @@ export const GameCard: React.FC<GameCardProps> = ({ game }) => {
         </div>
         <button
           type="button"
-          aria-label={isInCart ? 'REMOVE' : 'ADD TO CART'}
+          aria-label={`${isInCart ? 'Remove' : 'Add to cart'}, ${name}`}
           className="cta-stroke-primary"
           onClick={isInCart ? removeFromCart : addToCart}
           disabled={loading}

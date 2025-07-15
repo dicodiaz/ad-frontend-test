@@ -3,8 +3,8 @@
 exports[`GenreSelect renders GenreSelect unchanged 1`] = `
 <div>
   <select
+    aria-label="Select genre"
     class="flex-grow md:flex-grow-0"
-    name="genre"
   >
     <option
       selected=""

@@ -40,12 +40,12 @@ describe('GameCard', () => {
     });
 
     render(<GameCard game={mockGame} />);
-    expect(screen.getByRole('button', { name: 'REMOVE' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: `Remove, ${mockGame.name}` })).toBeInTheDocument();
   });
 
   it('dispatches ADD_TO_CART when clicked and not in cart', () => {
     render(<GameCard game={mockGame} />);
-    fireEvent.click(screen.getByRole('button', { name: 'ADD TO CART' }));
+    fireEvent.click(screen.getByRole('button', { name: `Add to cart, ${mockGame.name}` }));
     expect(mockDispatch).toHaveBeenCalledWith({
       type: 'ADD_TO_CART',
       payload: mockGame,
@@ -59,7 +59,7 @@ describe('GameCard', () => {
     });
 
     render(<GameCard game={mockGame} />);
-    fireEvent.click(screen.getByRole('button', { name: 'REMOVE' }));
+    fireEvent.click(screen.getByRole('button', { name: `Remove, ${mockGame.name}` }));
     expect(mockDispatch).toHaveBeenCalledWith({
       type: 'REMOVE_FROM_CART',
       payload: '1',
@@ -73,7 +73,7 @@ describe('GameCard', () => {
     });
 
     render(<GameCard game={mockGame} />);
-    const button = screen.getByRole('button', { name: 'ADD TO CART' });
+    const button = screen.getByRole('button', { name: `Add to cart, ${mockGame.name}` });
 
     expect(button).toBeDisabled();
     expect(button.querySelector('svg')).toBeInTheDocument();

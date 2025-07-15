@@ -6,6 +6,7 @@ exports[`Footer renders Footer unchanged 1`] = `
     class="flex justify-center bg-[#404040] px-6 py-16"
   >
     <a
+      aria-label="Go to home"
       href="/"
     >
       <img
