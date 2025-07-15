@@ -6,7 +6,7 @@ exports[`Cart renders Cart unchanged 1`] = `
     class="flex flex-col gap-y-8 px-6 py-8 md:gap-y-10 md:px-20 md:py-10 xl:gap-y-12 xl:px-32 xl:py-12"
   >
     <div
-      class="flex flex-col gap-y-3 text-[#3B3B3B]"
+      class="text-primary flex flex-col gap-y-3"
     >
       <h1
         class="text-2xl font-bold leading-7 tracking-wide md:text-3xl xl:text-4xl"
@@ -28,14 +28,14 @@ exports[`Cart renders Cart unchanged 1`] = `
         class="flex flex-col md:flex-grow"
       >
         <div
-          class="flex flex-col gap-y-4 px-4 py-5 md:flex-row md:gap-x-6 [&~&]:border-t-[0.5px] [&~&]:border-[#8F8F8F]"
+          class="[&~&]:border-stroke-secondary flex flex-col gap-y-4 px-4 py-5 md:flex-row md:gap-x-6 [&~&]:border-t-[0.5px]"
           data-testid="cart-item"
         >
           <div
             class="relative flex gap-x-3 md:w-2/5 md:flex-none"
           >
             <div
-              class="absolute left-3 top-3 rounded bg-[#F5F5F4] px-3 py-2 leading-4 tracking-wide"
+              class="text-primary absolute left-3 top-3 rounded bg-stone-100 px-3 py-2 leading-4 tracking-wide"
             >
               New
             </div>
@@ -82,7 +82,7 @@ exports[`Cart renders Cart unchanged 1`] = `
             class="flex flex-col gap-y-3 md:py-2"
           >
             <span
-              class="text-sm font-bold leading-4 text-[#737373]"
+              class="text-sm font-bold leading-4 text-neutral-500"
             >
               Action
             </span>
@@ -90,18 +90,18 @@ exports[`Cart renders Cart unchanged 1`] = `
               class="flex flex-col gap-y-2"
             >
               <h4
-                class="text-lg font-bold leading-5 tracking-wide text-[#3B3B3B] md:text-xl md:leading-6"
+                class="text-primary text-lg font-bold leading-5 tracking-wide md:text-xl md:leading-6"
               >
                 Cyberpunk 2077
               </h4>
               <span
-                class="min-h-[60px] leading-5 text-[#737373]"
+                class="min-h-[60px] leading-5 text-neutral-500"
               >
                 An open-world, action-adventure story set in Night City.
               </span>
             </div>
             <div
-              class="flex justify-end text-lg font-bold leading-5 tracking-wide text-[#3B3B3B] md:text-xl md:leading-6"
+              class="text-primary flex justify-end text-lg font-bold leading-5 tracking-wide md:text-xl md:leading-6"
             >
               $59.99
             </div>
@@ -138,13 +138,13 @@ exports[`Cart renders Cart unchanged 1`] = `
         class="flex flex-col gap-y-10 md:w-2/5 md:flex-none"
       >
         <div
-          class="flex flex-col gap-y-6 rounded-lg border-[0.5px] border-[#8F8F8F] px-4 py-6"
+          class="border-stroke-secondary flex flex-col gap-y-6 rounded-lg border-[0.5px] px-4 py-6"
         >
           <div
             class="flex flex-col gap-y-3"
           >
             <h3
-              class="text-xl font-bold leading-6 tracking-wide text-[#3B3B3B] md:text-2xl md:leading-7"
+              class="text-primary text-xl font-bold leading-6 tracking-wide md:text-2xl md:leading-7"
             >
               Order Summary
             </h3>
@@ -163,7 +163,7 @@ exports[`Cart renders Cart unchanged 1`] = `
               class="flex flex-col gap-y-3"
             >
               <div
-                class="flex items-center justify-between gap-x-3 text-lg leading-6 tracking-wide"
+                class="text-primary flex items-center justify-between gap-x-3 text-lg leading-6 tracking-wide"
               >
                 <span>
                   Cyberpunk 2077
@@ -174,10 +174,10 @@ exports[`Cart renders Cart unchanged 1`] = `
               </div>
             </div>
             <div
-              class="h-px bg-[#8F8F8F] opacity-50"
+              class="bg-stroke-secondary h-px opacity-50"
             />
             <div
-              class="flex justify-between text-xl font-bold leading-6 tracking-wide"
+              class="text-primary flex justify-between text-xl font-bold leading-6 tracking-wide"
             >
               <h4>
                 Order total
@@ -192,7 +192,7 @@ exports[`Cart renders Cart unchanged 1`] = `
           href="/checkout"
         >
           <button
-            class="w-full rounded-lg bg-[#585660] px-6 py-4 text-sm font-bold leading-4 tracking-[0.5px] text-white md:text-base"
+            class="cta-fill-primary"
             type="button"
           >
             Checkout

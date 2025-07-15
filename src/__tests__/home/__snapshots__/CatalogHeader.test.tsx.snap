@@ -3,15 +3,15 @@
 exports[`CatalogHeader renders CatalogHeader unchanged 1`] = `
 <div>
   <header
-    class="flex flex-col gap-y-8 border-b border-[#EFEDF3] px-6 py-8 md:gap-y-10 md:px-20 md:py-10 xl:gap-y-12 xl:px-32 xl:py-12"
+    class="border-stroke-tertiary flex flex-col gap-y-8 border-b px-6 py-8 md:gap-y-10 md:px-20 md:py-10 xl:gap-y-12 xl:px-32 xl:py-12"
   >
     <h1
-      class="text-2xl font-bold leading-7 tracking-wide text-[#3B3B3B] md:text-3xl xl:text-4xl"
+      class="text-primary text-2xl font-bold leading-7 tracking-wide md:text-3xl xl:text-4xl"
     >
       TOP SELLERS
     </h1>
     <label
-      class="flex gap-x-6 py-4 text-xl leading-6 tracking-wide md:justify-end"
+      class="text-primary flex gap-x-6 py-4 text-xl leading-6 tracking-wide md:justify-end"
     >
       <span
         class="font-bold"
@@ -19,7 +19,7 @@ exports[`CatalogHeader renders CatalogHeader unchanged 1`] = `
         Genre
       </span>
       <div
-        class="my-[1px] w-px bg-[#3B3B3B]"
+        class="bg-primary my-[1px] w-px"
       />
       <select
         class="flex-grow md:flex-grow-0"

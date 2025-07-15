@@ -13,13 +13,13 @@ exports[`Catalog renders Catalog unchanged 1`] = `
         data-testid="game-card"
       >
         <div
-          class="flex flex-col gap-y-5 rounded-2xl border-[0.5px] border-[#8F8F8F] p-6"
+          class="border-stroke-secondary flex flex-col gap-y-5 rounded-2xl border-[0.5px] p-6"
         >
           <div
             class="relative overflow-hidden rounded-t-2xl md:h-60"
           >
             <div
-              class="absolute left-3 top-3 rounded bg-[#F5F5F4] px-3 py-2 leading-4 tracking-wide"
+              class="text-primary absolute left-3 top-3 rounded bg-stone-100 px-3 py-2 leading-4 tracking-wide"
             >
               New
             </div>
@@ -40,7 +40,7 @@ exports[`Catalog renders Catalog unchanged 1`] = `
             class="flex flex-col gap-y-3"
           >
             <span
-              class="font-bold text-[#737373]"
+              class="font-bold text-neutral-500"
             >
               ACTION
             </span>
@@ -48,12 +48,12 @@ exports[`Catalog renders Catalog unchanged 1`] = `
               class="flex items-center justify-between gap-x-3 md:min-h-[60px]"
             >
               <h4
-                class="text-lg font-bold leading-5 tracking-wide text-[#3B3B3B]"
+                class="text-primary text-lg font-bold leading-5 tracking-wide"
               >
                 Cyberpunk 2077
               </h4>
               <span
-                class="text-xl font-bold leading-6 tracking-wide text-[#3B3B3B]"
+                class="text-primary text-xl font-bold leading-6 tracking-wide"
               >
                 $59.99
               </span>
@@ -61,7 +61,7 @@ exports[`Catalog renders Catalog unchanged 1`] = `
           </div>
           <button
             aria-label="ADD TO CART"
-            class="flex justify-center rounded-lg border border-[#3B3B3B] px-6 py-4 font-bold tracking-[0.5px] text-[#3B3B3B]"
+            class="cta-stroke-primary"
             disabled=""
             type="button"
           >
@@ -88,7 +88,7 @@ exports[`Catalog renders Catalog unchanged 1`] = `
         data-testid="game-card"
       >
         <div
-          class="flex flex-col gap-y-5 rounded-2xl border-[0.5px] border-[#8F8F8F] p-6"
+          class="border-stroke-secondary flex flex-col gap-y-5 rounded-2xl border-[0.5px] p-6"
         >
           <div
             class="relative overflow-hidden rounded-t-2xl md:h-60"
@@ -110,7 +110,7 @@ exports[`Catalog renders Catalog unchanged 1`] = `
             class="flex flex-col gap-y-3"
           >
             <span
-              class="font-bold text-[#737373]"
+              class="font-bold text-neutral-500"
             >
               RPG
             </span>
@@ -118,12 +118,12 @@ exports[`Catalog renders Catalog unchanged 1`] = `
               class="flex items-center justify-between gap-x-3 md:min-h-[60px]"
             >
               <h4
-                class="text-lg font-bold leading-5 tracking-wide text-[#3B3B3B]"
+                class="text-primary text-lg font-bold leading-5 tracking-wide"
               >
                 The Witcher 3: Wild Hunt
               </h4>
               <span
-                class="text-xl font-bold leading-6 tracking-wide text-[#3B3B3B]"
+                class="text-primary text-xl font-bold leading-6 tracking-wide"
               >
                 $39.99
               </span>
@@ -131,7 +131,7 @@ exports[`Catalog renders Catalog unchanged 1`] = `
           </div>
           <button
             aria-label="ADD TO CART"
-            class="flex justify-center rounded-lg border border-[#3B3B3B] px-6 py-4 font-bold tracking-[0.5px] text-[#3B3B3B]"
+            class="cta-stroke-primary"
             disabled=""
             type="button"
           >
@@ -156,7 +156,7 @@ exports[`Catalog renders Catalog unchanged 1`] = `
     </div>
     <button
       aria-label="SEE MORE"
-      class="flex w-full justify-center rounded-lg bg-[#585660] px-6 py-4 text-sm leading-4 tracking-[0.5px] text-white md:w-[136.5px] md:text-base md:leading-4"
+      class="cta-fill-primary md:w-[136.5px]"
       type="button"
     >
       SEE MORE

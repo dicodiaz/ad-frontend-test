@@ -11,9 +11,10 @@ const config: Config = {
       fontFamily: {
         area: ['area-normal', 'sans-serif'],
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        primary: '#3B3B3B',
+        'stroke-secondary': '#8F8F8F',
+        'stroke-tertiary': '#EFEDF3',
       },
     },
   },

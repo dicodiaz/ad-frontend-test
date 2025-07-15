@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.cta-primary {
+  @apply flex justify-center rounded-lg px-6 py-4 font-bold leading-4 tracking-[0.5px];
+}
+
+.cta-stroke-primary {
+  @apply text-primary cta-primary border-primary border;
+}
+
+.cta-fill-primary {
+  @apply cta-primary w-full bg-[#585660] text-sm text-white md:text-base md:leading-4;
+}

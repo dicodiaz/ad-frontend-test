@@ -3,13 +3,13 @@
 exports[`OrderSummary renders OrderSummary unchanged 1`] = `
 <div>
   <div
-    class="flex flex-col gap-y-6 rounded-lg border-[0.5px] border-[#8F8F8F] px-4 py-6"
+    class="border-stroke-secondary flex flex-col gap-y-6 rounded-lg border-[0.5px] px-4 py-6"
   >
     <div
       class="flex flex-col gap-y-3"
     >
       <h3
-        class="text-xl font-bold leading-6 tracking-wide text-[#3B3B3B] md:text-2xl md:leading-7"
+        class="text-primary text-xl font-bold leading-6 tracking-wide md:text-2xl md:leading-7"
       >
         Order Summary
       </h3>
@@ -28,10 +28,10 @@ exports[`OrderSummary renders OrderSummary unchanged 1`] = `
         class="flex flex-col gap-y-3"
       />
       <div
-        class="h-px bg-[#8F8F8F] opacity-50"
+        class="bg-stroke-secondary h-px opacity-50"
       />
       <div
-        class="flex justify-between text-xl font-bold leading-6 tracking-wide"
+        class="text-primary flex justify-between text-xl font-bold leading-6 tracking-wide"
       >
         <h4>
           Order total

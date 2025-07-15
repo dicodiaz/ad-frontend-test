@@ -12,7 +12,7 @@ export const Checkout = () => {
   }, []);
 
   return (
-    <h1 className="text-2xl font-bold leading-7 tracking-wide text-[#3B3B3B]">
+    <h1 className="text-primary text-2xl font-bold leading-7 tracking-wide">
       Thanks for your purchase!
     </h1>
   );

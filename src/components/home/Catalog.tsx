@@ -42,7 +42,7 @@ export const Catalog: React.FC<CatalogProps> = ({ data, genre }) => {
         <button
           type="button"
           aria-label="SEE MORE"
-          className="flex w-full justify-center rounded-lg bg-[#585660] px-6 py-4 text-sm leading-4 tracking-[0.5px] text-white md:w-[136.5px] md:text-base md:leading-4"
+          className="cta-fill-primary md:w-[136.5px]"
           onClick={handleSeeMore}
           disabled={loading}
         >
